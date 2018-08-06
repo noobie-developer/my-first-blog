@@ -13,6 +13,14 @@
 			<p>I love photography, it relieves stress :) </p>
 		</div>
 		
+		{% for post in posts %}
+			<div>
+				<p>published: {{ post.published_date }}</p>
+				<h1><a href="">{{ post.title }}</a></h1>
+				<p>{{ post.text|linebreaksbr }}</p>
+			</div>
+		{% endfor %}
+		
 		<div> 
 			<p>published: Mon, Aug 6, 19:37</p>
 			<h2><a href="#">My second post</a></h2>
